@@ -38,18 +38,19 @@ public class GameManager : MonoBehaviour
     {
         gameOverText.enabled = false;
 
-        foreach (Transform pellet in pellets) {
-            pellet.gameObject.SetActive(true);
-        }
+        // foreach (Transform pellet in pellets) {
+        //     pellet.gameObject.SetActive(true);
+        // }
 
         ResetState();
     }
 
     private void ResetState()
     {
-        for (int i = 0; i < ghosts.Length; i++) {
-            ghosts[i].ResetState();
-        }
+        ghosts[0].ResetState();
+        // for (int i = 0; i < ghosts.Length; i++) {
+        //     ghosts[0].ResetState();
+        // }
 
         pacman.ResetState();
     }
